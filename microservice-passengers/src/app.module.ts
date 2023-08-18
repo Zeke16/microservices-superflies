@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
-import { UserModule } from './user/user.module';
 import { PassengerModule } from './passenger/passenger.module';
-import { FlightModule } from './flight/flight.module';
-import { ProxyModule } from './common/proxy/proxy.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -13,10 +11,8 @@ import { ProxyModule } from './common/proxy/proxy.module';
       envFilePath: ['.env.development'],
       isGlobal: true,
     }),
-    UserModule,
+    MongooseModule.forRoot(process.env.URI_MONGODB),
     PassengerModule,
-    FlightModule,
-    ProxyModule
   ],
   controllers: [AppController],
   providers: [AppService],
