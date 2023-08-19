@@ -14,7 +14,7 @@ async function bootstrap() {
     .setTitle('SuperFlies API')
     .setDescription('Scheduled Flies App')
     .setVersion('2.0.0')
-    //.addBearerAuth()
+    .addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, options);

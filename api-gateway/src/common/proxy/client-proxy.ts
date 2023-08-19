@@ -12,7 +12,6 @@ export class ClientProxySuperFlies {
   constructor(private readonly config: ConfigService) {}
 
   clientProxyUsers(): ClientProxy {
-    console.log(this.config.get('AMQP_URL'))
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {

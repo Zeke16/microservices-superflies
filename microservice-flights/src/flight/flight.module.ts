@@ -12,10 +12,11 @@ import { PassengerSchema } from './schema/passenger.schema';
       {
         name: FLIGHT.name,
         useFactory: () => FlightSchema.plugin(require('mongoose-autopopulate')),
-      },{
+      },
+      {
         name: PASSENGER.name,
         useFactory: () => PassengerSchema,
-      },
+      }
     ]),
   ],
   controllers: [FlightController],
