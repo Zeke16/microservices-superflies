@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   app:
-    image: app_vuelos:v2
+    image: app_vuelos:v3
     container_name: app_vuelos
     build:
       context: ./api-gateway

@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "d0171039-a362-448b-9058-9c2461723a03",
+		"name": "Api-flies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21429832"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ezequiel Ramirez\",\r\n    \"username\": \"Zeke17\",\r\n    \"email\": \"kr2000.17@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URLv2}}/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URLv2}}/user/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URLv2}}/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Get users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URLv2}}/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ezequiel Ramirez editado\",\r\n    \"username\": \"Zeke16\",\r\n    \"email\": \"kr2000.16@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/user/64dbf7d38da9bcf77e679222"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Passenger",
+			"item": [
+				{
+					"name": "Create passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Passenger 1\", \"email\": \"kr2000.16@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URLv2}}/passenger"
+					},
+					"response": []
+				},
+				{
+					"name": "Update passenger",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Passenger 3\", \"email\": \"kr2000.16@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URLv2}}/passenger/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get passengers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URLv2}}/passenger"
+					},
+					"response": []
+				},
+				{
+					"name": "Get passenger",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URLv2}}/passenger/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete passenger",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URLv2}}/passenger/id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "Create flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\": \"Pilot Andres\",\r\n    \"airplane\": \"Airbus A340\",\r\n    \"destinationCity\": \"Mexico City\",\r\n    \"flightDate\": \"2021-03-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/flight"
+					},
+					"response": []
+				},
+				{
+					"name": "Get flights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URLv2}}/flight"
+					},
+					"response": []
+				},
+				{
+					"name": "Get flight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/flight/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update flight",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\": \"Pilot Andres\",\r\n    \"airplane\": \"Airbus A340\",\r\n    \"destinationCity\": \"USSR\",\r\n    \"flightDate\": \"2021-03-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/flight/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete flight",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/flight/id"
+					},
+					"response": []
+				},
+				{
+					"name": "Add passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/flight/idFlight/passenger/idPassenger"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Zeke16\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URLv2}}/auth/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/signup"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

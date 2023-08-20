@@ -17,7 +17,7 @@ import { ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/auth/guards/jwt_auth.guard';
 
 @ApiTags('users')
-//@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard)
 @Controller('api/v2/user')
 export class UserController {
   constructor(private readonly clienProxy: ClientProxySuperFlies) {}
