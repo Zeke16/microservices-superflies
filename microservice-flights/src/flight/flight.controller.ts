@@ -35,8 +35,16 @@ export class FlightController {
   @MessagePattern(FlightMSG.ADD_PASSENGER)
   addPassenger(@Payload() payload: any) {
     return this.flightService.addPassenger(
-      payload.flighiId,
+      payload.flightId,
       payload.passengerId,
+    );
+  }
+
+  @MessagePattern(FlightMSG.ADD_PLANE)
+  addPlane(@Payload() payload: any) {
+    return this.flightService.addPlane(
+      payload.flightId,
+      payload.planeId,
     );
   }
 }

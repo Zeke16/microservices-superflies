@@ -1,7 +1,8 @@
 export enum RabbitMQ {
   UserQueue = 'users',
   PassengerQueue = 'passengers',
-  FlightQueue = 'flights'
+  FlightQueue = 'flights',
+  PlaneQueue = 'plane'
 }
 
 export enum UserMSG {
@@ -27,5 +28,14 @@ export enum FlightMSG {
   FIND_ONE = 'FIND_FLIGHT',
   UPDATE = 'UPDATE_FLIGHT',
   DELETE = 'DELETE_FLIGHT',
-  ADD_PASSENGER = 'ADD_PASSENGER'
+  ADD_PASSENGER = 'ADD_PASSENGER',
+  ADD_PLANE = 'ADD_PLANE'
+}
+
+export enum PlaneMSG {
+  CREATE = 'CREATE_PLANE',
+  FIND_ALL = 'FIND_PLANES',
+  FIND_ONE = 'FIND_PLANE',
+  UPDATE = 'UPDATE_PLANE',
+  DELETE = 'DELETE_PLANE',
 }

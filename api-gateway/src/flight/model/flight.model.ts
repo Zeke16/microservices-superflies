@@ -10,10 +10,6 @@ export class Flight {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  readonly airplane: string;
-  @ApiProperty()
-  @IsNotEmpty()
-  @IsString()
   readonly destinationCity: string;
   @ApiProperty()
   @IsNotEmpty()
